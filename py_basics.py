@@ -267,7 +267,7 @@ print("printing the set" ,num_set)
 num_set.add(33)
 print("added element :" ,num_set)
 print("remove element raise error if item not present :", num_set.remove(33))
-print("discard element not raise error :", num_set.remove(33))
+print("discard element not raise error :", num_set.discard(33))
 # print(num_set[0]) because no order
 combo_set = num_set.union(char_set)
 #no update on original set 
@@ -321,7 +321,15 @@ def exception_handling():
 exception_call = exception_handling()
 print(exception_call)
 
+try: 
+    number = int(input("enter a number greater than 10 to check the raise exception"))
+    if number > 10 :
+        raise ValueError("The entered valueis invalid ")
+except ValueError:
+    print("this is a error occured due to adding the value more than 10")
 
-number = int(input("enter a number greater than 10 to check the raise exception"))
-if number > 10 :
-    raise ValueError("The entered valueis invalid ")
+
+#shorthand if else
+age = 100
+pension = True if age > 70 else False 
+print(pension)
